@@ -5,7 +5,7 @@ import (
 )
 
 func TestCandle(t *testing.T) {
-	u := NewUpbit("", "")
+	u := NewUpbit(accessKey, secretKey)
 
 	// candle
 	minuteCandles, remaining, e := u.GetMinuteCandles(marketID, "", "", "1")

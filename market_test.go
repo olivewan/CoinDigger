@@ -3,7 +3,7 @@ package upbit
 import "testing"
 
 func TestMarket(t *testing.T) {
-	u := NewUpbit("", "")
+	u := NewUpbit(accessKey, secretKey)
 
 	markets, remaining, e := u.GetMarkets()
 	if e != nil || len(markets) == 0 {
